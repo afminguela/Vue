@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="app">
+      <h1> Lista de Usuarios</h1>
+<p v-for="name in listOfNames"></p>
+      <button v-on:click="showNames()"></button>
+      <button></button>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+              const { createApp } = Vue; // extraemos el método createApp de V
+
+              const app = createApp({
+      data() {
+          return {
+              listOfNames:[
+        { "name": "Fernando", "isPremium": false },
+        { "name": "María", "isPremium": true },
+        { "name": "Júlia", "isPremium": true },
+        { "name": "Marc", "isPremium": false },
+        { "name": "Patricia", "isPremium": false }
+      ]
+      }
+      },
+      methods: {
+                isPremium(){
+
+                }
+      },
+      })
+      app.mount("#app"); // le indicamos hacia qué elemento HTML apunt
+      
+    </script>
+  </body>
+</html>
