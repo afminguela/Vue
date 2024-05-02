@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue example</title>
+</head>
+<body id="app">
+    <h1>contador</h1>
+    <!-- <p id="counterValue">0</p> -->
+    <p>{{ initialValue }}</p>
+    <!-- <button onClick="incrementCounter()" >suma 1 -->
+
+      <button v-on:click="incrementCounter"> suma 1+</button>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        // console.log("hello from console")
+        // function incrementCounter() {
+        //     console.log("me has pulsado")
+        //     let counterElement = document.querySelector("#counterValue").textContent
+        //     let newValue = Number(counterElement) + 1 
+        //     console.log(newValue)
+        //     document.querySelector("#counterValue").textContent = newValue
+        // }
+
+      const { createApp, ref } = Vue
+
+       const app = createApp({ // es como si fuera una clase
+          //data propiedades
+          data(){
+            return{
+              initialValue: 0
+            }
+          },
+          //methods 
+          methods:{
+            incrementCounter() {
+              this.initialValue++
+            }
+          }
+  });
+  app.mount('#app')
+
+    </script>
+</body>
+</html>
