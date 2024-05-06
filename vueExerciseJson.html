@@ -28,14 +28,10 @@
       },
       methods: {
 
-        showUsers(){
-            this.users= [
-        { "name": "Fernando", "isPremium": false },
-        { "name": "María", "isPremium": true },
-        { "name": "Júlia", "isPremium": true },
-        { "name": "Marc", "isPremium": false },
-        { "name": "Patricia", "isPremium": false }
-      ]
+       async showUsers(){
+            let response = await fetch ("http://localhost:3000/users")
+            let data = await response.json();
+            this.users =data;
         },
         
         showPremium(){

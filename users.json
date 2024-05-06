@@ -1,0 +1,10 @@
+{
+    "users":[
+        { "name": "Fernando", "isPremium": false },
+        { "name": "María", "isPremium": true },
+        { "name": "Júlia", "isPremium": true },
+        { "name": "Marc", "isPremium": false },
+        { "name": "Patricia", "isPremium": false }
+      ]
+
+}
